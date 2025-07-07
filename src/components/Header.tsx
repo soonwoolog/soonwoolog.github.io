@@ -4,7 +4,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 
 export default function Header() {
   return (
-    <header className="sticky backdrop-filter">
+    <header className="sticky top-0 backdrop-blur">
       <nav className="flex items-center justify-between w-full max-w-5xl mx-auto">
         <Link href="/" className="font-medium">
           soonwoolog

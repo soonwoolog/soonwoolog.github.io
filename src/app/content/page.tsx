@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import NotionBlocks from "@/src/components/notion/NotionBlocks";
+// import NotionBlocks from "../com components/notion/NotionBlocks";
 import Link from "next/link";
 
 export default function NotionContentPage() {
@@ -19,7 +19,7 @@ export default function NotionContentPage() {
 
   return (
     <div>
-      <NotionBlocks blocks={blocks} />
+      {/* <NotionBlocks blocks={blocks} /> */}
       <Link href="/">Home</Link>
     </div>
   );

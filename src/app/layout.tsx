@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./layout.css";
 
 import Header from "../components/Header";
 
@@ -15,8 +14,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>
-          <section className="max-w-5xl mx-auto">{children}</section>
+        <main className="h-screen bg-[#f5f5f7]">
+          <section className="max-w-5xl mx-auto pb-[80px] mt-0 pt-[52px]">{children}</section>
         </main>
       </body>
     </html>
