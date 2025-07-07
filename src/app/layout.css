@@ -1,0 +1,13 @@
+main {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f5f7;
+}
+
+header.sticky {
+  top: 0;
+}
+
+.notion-posts li {
+  background-color: #fff;
+}
