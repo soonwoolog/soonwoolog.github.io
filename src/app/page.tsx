@@ -1,9 +1,7 @@
 import { getNotionPageList } from "nextjs-notion-integration";
-import NotionPageList from "components/notion/NotionPageList";
+import NotionPageList from "components/notion/page/NotionPageList";
 
-export async function Home() {
+export default async function Home() {
   const posts = await getNotionPageList();
   return <NotionPageList posts={posts} />;
 }
-
-export default Home;
