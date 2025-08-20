@@ -1,27 +1,21 @@
-import NotionHeading from "../blocks/NotionHeading";
-import NotionPageTitle from "../page/NotionPageTitle";
 import type { NotionBlockResponse } from "nextjs-notion-integration";
+import Container from "components/Container";
+import RenderBlock from "components/notion/blocks/RenderBlock";
 
 export function NotionPage({ blocks }: { blocks: NotionBlockResponse }) {
   return (
-    <>
-      <NotionPageTitle data={blocks.title} />
-      {blocks.content.map((block, idx) => {
-        return (
-          <div key={idx}>
-            {(() => {
-              switch (block.type) {
-                case "heading_1":
-                  return <NotionHeading data={block.content} />;
-                case "bulleted_list_item":
-                  return <p>&#8226; {block.content}</p>;
-                // ...
-              }
-            })()}
-          </div>
-        );
-      })}
-    </>
+    <Container>
+      <div className="px-6 py-16 pt-16 pb-48 mx-auto -mb-48 text-center md:pb-96 md:-mb-96">
+        <div className="max-w-3xl mx-auto">
+          <div className="font-bold tracking-tight text-gray-900 text-w-4xl sm:text-4xl text-2xl">{blocks.title}</div>
+        </div>
+      </div>
+      <div className="mb-24">
+        {blocks.content.map((block, idx) => (
+          <RenderBlock key={idx} block={block} />
+        ))}
+      </div>
+    </Container>
   );
 }
 

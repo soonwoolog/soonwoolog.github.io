@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Header from "@/components/Header";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 export const metadata: Metadata = { title: "soonwoolog" };
 
@@ -14,9 +15,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="h-screen">
-          <section className="max-w-5xl mx-auto pb-[80px] mt-0 pt-[52px]">{children}</section>
+        <main className="min-h-screen">
+          <section className="pt-14">{children}</section>
         </main>
+        <Footer />
       </body>
     </html>
   );
